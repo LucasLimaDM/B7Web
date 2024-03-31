@@ -1,0 +1,676 @@
+$white: #ffffff;
+$black: #000000;
+$distac-color: #ba8b59;
+$lighter-gray: #f7f7f7;
+$light-gray: #f0f0f0;
+$medium-light-gray: #ddd;
+$medium-gray: #a0a0a0;
+$dark-gray: #404040;
+$font-xsmall: 0.65rem;
+$font-small: 0.9rem;
+$font-medium: 1.35rem;
+$font-medium-large: 1.5rem;
+$font-large:2rem;
+$font-xlarge:3.2rem;
+$font-xxlarge: 4rem;
+$height-header: 128px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //outline: 1px solid lime;
+}
+
+//* Estilos por componente
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    font-size: $font-large;
+}
+button{
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    font-size: $font-small;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+section.common{
+    padding: 50px 0;
+}
+
+.light{
+    background-color: $white;
+    color: $black;
+}
+
+.dark{
+    background-color: $black;
+    color: $white;
+}
+
+.container{
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.color-golden{
+    color: $distac-color;
+}
+
+.subtitle{
+    color: $medium-gray;
+    font-weight: bold;
+    font-size: $font-small;
+}
+
+.button-main{
+    background-color: $distac-color;
+    color: $white;
+    width: 190px;
+    height: 50px;
+    border-radius: 24px;
+}
+
+.button-second::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $distac-color;
+}
+
+.section-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2{
+        margin-bottom: 10px;
+    }
+}
+
+.pointer, button{
+    cursor: pointer;
+}
+
+.slider-pointers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 60px;
+    margin-top: -60px;
+
+
+    .pointer{
+        width: 14px;
+        height: 14px;
+        border-radius: 15px;
+        border: 2px solid $distac-color;
+        
+        &.active{
+            background-color: $distac-color;
+        }
+    }
+}
+
+// Estilos por seção
+header{
+    background-color: black;
+    color: white;
+    height: 100px;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7%;
+        height: 100px;
+        
+
+        .logo-alterium{
+            width: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            img{
+                width: 80px;
+            }
+        }
+
+        nav{
+            flex: 1;
+            display: none;
+            
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 16px;
+                font-size: $font-small;
+                font-weight: bold;
+                
+                li{
+                    
+                    
+                    a{
+                        display: flex;
+                        align-items: center;
+                        height: 100px;
+                        border-bottom: 4px solid $black;
+                        &:hover, &.active{
+                            border-bottom: 8px solid $distac-color;
+                            transition: border-bottom 0.15s;
+                            scale: 1.065;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section-banner{
+    height: calc(100vh - 100px);
+    color: $white;
+    position: relative;
+    background-image: url(../../media/office.gif);
+    background-size: cover;
+
+    .sliders{ 
+        background-color: #00000088;
+        
+        .slider{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: calc(100vh - 100px);
+            text-align: center;
+            font-weight: bold;
+
+            .banner-content{
+                color: $white;
+                h2{
+                    font-size: $font-large;
+                }
+                .banner-contact{
+                    margin: 24px;
+                }
+                .button-main{
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+#section-about-us{
+    .about-us-info{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+
+
+        .about-us-text{
+            font-size: $font-small;
+            word-spacing: 8px;
+            line-height: 24px;
+            flex: 1;
+            .button-second{
+                margin-top: 24px;
+            }
+        }
+
+        .about-us-video, iframe {
+            flex: 1;
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 480/270;
+            
+        }
+    }
+}
+
+#section-services{
+    .service-list{
+        display: flex;
+        flex-direction: column;
+        
+
+        .service{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            
+            img{
+                height: 60px;
+            }
+            h3{
+                padding: 8px;
+                height: 60px;
+            }
+            p{
+                font-size: $font-small;
+                height: 80px;
+                color: $medium-gray;
+            }
+        }
+    }
+}
+
+#section-projects{
+    .selector{
+        max-width: 710px;
+        margin: auto;
+        background-color: $lighter-gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: $font-xsmall;
+        border-radius: 24px;
+        border: 1px solid $medium-light-gray;
+        margin-bottom: 50px;
+
+        .option{
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            border-bottom: 2px solid $lighter-gray;
+            cursor: pointer;
+            transition: 0.25s;
+
+            &:nth-child(6){
+                border-bottom-right-radius: 24px;
+            }
+
+            &:nth-child(4){
+                border-bottom-left-radius: 24px;
+            }
+
+            &:nth-child(3){
+                border-top-right-radius: 24px;
+            }
+
+            &:nth-child(1){
+                border-top-left-radius: 24px;
+            }
+            
+            &:not(:first-child):not(:nth-child(4)){
+                border-left: 1px solid $medium-light-gray;
+            }
+            &:nth-child(4), &:nth-child(5), &:nth-child(6){
+                border-top: 1px solid $medium-light-gray;
+                
+            }
+            &:hover{
+                border-bottom: 2px solid $distac-color;
+                background-color: $light-gray;
+                box-shadow: 4px -2px 18px -3px $light-gray;
+            }
+        }
+    }
+
+    .project-list{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+
+        .container-project{
+            position: relative;
+            width: 90%;
+            margin: auto;
+
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                transition: filter 0.4s;
+            }
+            
+            .project-design{
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                overflow: hidden;
+
+                .project-info{
+                    color: $white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    height: 100%;
+                    gap: 12px;
+                    transition: margin 0.35s;
+                    margin-top: 90%;
+                    
+    
+                    h3{
+                        font-size: $font-medium;
+                    }
+    
+                    p{
+                        width:80%;
+                        font-size: $font-small;
+                    }
+                }
+            }
+
+            &:hover{
+                img{
+                    filter: brightness(0.5);
+                    
+                }
+
+                .project-design{
+                    
+                    .project-info{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section-team{
+    background:#000 url(../images/banner-desk.jpg);
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    .section-title{
+        background-color: #00000099;
+        margin: 0;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .slider-container{
+        background-color: #00000099;
+
+        .sliders{
+    
+            .slider{
+                height: 70vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                .card-employee{
+                    background-color: $white;
+                    height: 600px;
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    gap: 12%;
+                    color: $black;
+    
+                    > img{
+                        width: 170px;
+                        height: 170px;
+                        border-radius: 100%;
+                        object-fit: cover;
+                    }
+    
+                    .employee-info{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+    
+                    }
+                    .list-icons{
+                        display: flex;
+                        gap: 10px;
+                        color: $white;
+                        font-size: 26px;
+                        font-weight: bold;
+    
+                        .icon{
+                            background-color: $medium-gray;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 20px;
+                            width: 36px;
+                            height: 36px;
+                            cursor: pointer;
+    
+                            img{
+                                width: 20px;
+                                height: 20px;
+    
+                                
+                            }
+    
+                            &.facebook img{
+                                width: 9px;
+                                padding: 0 ;
+                            }
+    
+                            &.others{
+                                padding-bottom: 12px;
+                            }
+
+                            &:hover{
+                                background-color: $distac-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .slider-pointers{
+            margin: 0;
+            height: 80px;
+        }
+    }
+}
+
+
+
+//celulares pequenos 320 - 480
+@media (min-width:320px){
+    body{
+        background-color: $white;
+    }
+}
+
+//celulares mais larguinhos 480 - 760
+@media (min-width: 480px){
+    #section-banner .sliders .slider .banner-content h2{
+        font-size: $font-medium-large;
+    }
+
+    #section-projects{
+        .selector{
+            font-size: $font-small;
+        }
+        .project-list .container-project{
+
+            .project-design .project-info{
+                h3{
+                    font-size: $font-medium-large;
+                }
+            }
+
+        } 
+    }
+}
+
+//Tablet 760 - 920
+@media (min-width: 760px){
+
+    #section-banner .sliders .slider .banner-content h2{
+        font-size: $font-xlarge;
+    }
+
+    #section-services{
+        .service-list{
+            flex-direction: row;
+            border-right: 1px solid $dark-gray;
+
+            .service{
+                border-left: 1px solid $dark-gray;
+            }
+        }
+    }
+
+    #section-about-us{
+        .about-us-info{
+            flex-direction: row;
+            align-items: flex-start;
+            .about-us-video{
+                flex: none;
+                width: 400px;
+                box-shadow: 2px 2px 24px 6px #999999bb;
+            }
+        }
+    }
+
+    #section-projects{
+        .selector{
+            display: flex;
+    
+            .option{
+                &:nth-child(6){
+                    border-radius: 0 24px 24px 0;
+                }
+    
+                &:nth-child(4){
+                    border-bottom-left-radius: 0;
+                }
+    
+                &:nth-child(3){
+                    border-top-right-radius: 0;
+                }
+    
+                &:nth-child(1){
+                    border-radius: 24px 0 0 24px;
+                }
+                
+                &:not(:first-child){
+                    border-left: 1px solid $medium-light-gray;
+                }
+                &:nth-child(4), &:nth-child(5), &:nth-child(6){
+                    border-top: 0;
+                    
+                }
+            }
+        }
+        
+        .project-list{
+            grid-template-columns: 1fr 1fr;
+            gap: 24pxpx;
+
+            .container-project{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// tablets grandes 920 - 1200
+@media (min-width: 920px){
+    #section-projects{
+        .project-list{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    #section-team{
+        .slider-container{
+            .sliders{
+                .slider{
+                    width: 50vw;
+                }
+            }
+
+            .slider-pointers{
+
+                .pointer[target="3"], .pointer[target="4"]{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//Computador
+@media (min-width: 1200px){
+
+    header{
+        .container nav{
+            display: block;
+        }
+    }
+    
+    #section-banner .sliders .slider .banner-content h2{
+        font-size: $font-xxlarge;
+        min-width: 504px;
+    }
+
+    #section-projects{
+        .project-list{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    #section-team{
+        .slider-container{
+            .sliders{
+                .slider{
+                    width: 33%;
+                }
+            }
+        }
+
+        .slider-pointers{
+            .pointer[target="2"], .pointer[target="3"], .pointer[target="4"]{
+                display: none;
+            }
+        }
+    }
+}

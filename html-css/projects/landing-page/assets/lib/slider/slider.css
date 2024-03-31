@@ -1,0 +1,27 @@
+.slider-container{
+    overflow: hidden;
+}
+.sliders{
+    width: fit-content;
+    display: flex;
+    transition: margin 2s;
+    
+}
+.slider{
+    width: 100vw;
+}
+.sliders[slide=0]{
+    margin-left: 0;
+}
+.sliders[slide="1"]{
+    margin-left: -100vw;
+}
+.sliders[slide="2"]{
+    margin-left: -200vw;
+}
+.sliders[slide="3"]{
+    margin-left: -300vw;
+}
+.sliders[slide="4"]{
+    margin-left: -400vw;
+}
