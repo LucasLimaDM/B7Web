@@ -14,14 +14,14 @@
     margin-left: 0;
 }
 .sliders[slide="1"]{
-    margin-left: -100vw;
+    margin-left: -100%;
 }
 .sliders[slide="2"]{
-    margin-left: -200vw;
+    margin-left: -200%;
 }
 .sliders[slide="3"]{
-    margin-left: -300vw;
+    margin-left: -300%;
 }
 .sliders[slide="4"]{
-    margin-left: -400vw;
+    margin-left: -400%;
 }
