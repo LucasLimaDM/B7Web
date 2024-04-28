@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 export default function Home() {
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [modalImage, setModalImage] = useState('');
 
     function handleImageClick(url: string){
@@ -19,8 +19,8 @@ export default function Home() {
 
     return (
         
-        <main>
-            <h1>Photos Gallery</h1>
+        <main className="bg-indigo-950">
+            <h1 className="w-full text-2xl text-center text-white p-4 font-bold">Photos Gallery</h1>
 
             <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
 
