@@ -12,7 +12,7 @@ export default function Home() {
       setActiveQuestionId(activeQuestionId-1)
     }
 
-    setActiveAnswer({option: 0, state: 0})
+    
   }
 
   function nextQuestion(){
@@ -20,7 +20,7 @@ export default function Home() {
       setActiveQuestionId(activeQuestionId+1)
     }
 
-    setActiveAnswer({option: 0, state: 0})
+
   }
 
   const questions = questApi.requestQuestions()
@@ -30,11 +30,11 @@ export default function Home() {
   });
 
   const [answers, setAnswers] = useState(emptyAnswers);
+  console.log('answers :', answers[0]);
 
   const [activeQuestionId, setActiveQuestionId] = useState(0);
   //option 0 = nenhuma option, state{0 = null, 1 = false, 2 = true}
-  const [activeAnswer, setActiveAnswer] = useState({option: 0, state: 0})
-  
+  const activeAnswer = answers[activeQuestionId];
   
   const activeQuestion = questions[activeQuestionId];
   const questionsLength = questions.length;
@@ -48,10 +48,10 @@ export default function Home() {
         <div className="h-80 w-96">
 
           <OptionList
-            activeAnswer={activeAnswer}
             activeQuestionId={activeQuestionId}
             options={activeQuestion.options}
-            setActiveAnswer={setActiveAnswer}
+            setAnswers={setAnswers}
+            answers={answers}
           />
 
           

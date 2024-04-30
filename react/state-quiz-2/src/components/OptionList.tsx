@@ -1,19 +1,16 @@
 "use client"
 
+import { Answer } from "@/types/Answer";
 import { Option } from "./Option";
 
 type Props = {
   activeQuestionId: number,
   options: string[],
-  activeAnswer: {
-    option: number,
-    state: number,
-  },
-  setActiveAnswer : Function,
+  setAnswers : Function,
+  answers: Answer[],
 }
 
-export function OptionList({activeQuestionId, options, activeAnswer, setActiveAnswer}: Props){
-  console.log(options)
+export function OptionList({activeQuestionId, options, setAnswers, answers}: Props){
   return (
     options.map((option, key) => {
       return(
@@ -21,8 +18,8 @@ export function OptionList({activeQuestionId, options, activeAnswer, setActiveAn
           text={option}
           optNum={key + 1}
           activeQuestionId={activeQuestionId}
-          activeAnswer={activeAnswer}
-          setActiveAnswer={setActiveAnswer}
+          setAnswers={setAnswers}
+          answers={answers}
         />
       );
     
