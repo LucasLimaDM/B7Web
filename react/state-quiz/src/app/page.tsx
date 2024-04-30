@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { questions } from "@/data/questions";
 import { Option } from "@/components/Option";
-import { Question } from "@/types/Question";
+
 
 export default function Home() {
     const [activeQuestion, setActiveQuestion] = useState<number>(0)
