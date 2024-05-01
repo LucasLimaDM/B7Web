@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react";
-import { Option } from "@/components/Option";
 import { questApi } from "@/api/questApi";
 import { OptionList } from "@/components/OptionList";
+import { IconQuestion } from "@/components/IconQuestion";
 
 export default function Home() {
 
@@ -58,7 +58,13 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between p-3">
+
           <p>Questão {activeQuestionId+1} de {questionsLength}</p>
+
+          <IconQuestion
+            answers={answers}
+            activeQuestionId={activeQuestionId}
+          />
 
           <div>
             <button onClick={prevQuestion}>
@@ -68,7 +74,12 @@ export default function Home() {
             <img src="/assets/next.svg" alt="next" className="h-5"/>
             </button>
           </div>
+
         </div>
+
+        
+          
+        
       </div>
 
     </main>
