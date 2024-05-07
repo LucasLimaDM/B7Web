@@ -2,7 +2,7 @@ export const questionsAnswers = [
     {
         title: 'Qual o presidente do Brasil?',
         options: ['Bolsonaro', 'Neymar', 'Dilma', 'Lula'],
-        answer: 0,
+        answer: 3,
     },
     {
         title: 'Qual o nome da minha cachorrinha?',
@@ -18,5 +18,11 @@ export const questionsAnswers = [
       title: 'Em que colégio conheci minha esposa?',
       options: ['Cozzolino', 'Santo Agostinho', 'Santo Antônio', 'Millenium'],
       answer: 0,
-    }
+    },
+
+    {
+      title: 'Em que colégio conheci minha esposa?',
+      options: ['Cozzolino', 'Santo Agostinho', 'Santo Antônio', 'Millenium'],
+      answer: 0,
+    },
 ]

@@ -9,21 +9,22 @@ export function MenuSubmitBody(){
   
   return (
     <div>
-      {answers.map((answer, index) => {
-        return (
-          <div
-          className={(answer.option !== null ? answer.state ? 'bg-green-200': 'bg-red-200' : 'bg-slate-50') + ' p-2 cursor-default'}
-          >
-            <p>{questions[index].title}</p>
+      <div className="h-64 overflow-y-scroll">
+        {answers.map((answer, index) => {
+          return (
+            <div
+            className={(answer.option !== null ? answer.state ? 'bg-green-200': 'bg-red-200' : 'bg-slate-50') + ' p-2 cursor-default'}
+            >
+              <p>{questions[index].title}</p>
 
-            <p
-            className={''}
-            >{ answer.option !== null ? questions[index].options[answer.option] : '-'}</p>
-          </div>
+              <p
+              className={''}
+              >{ answer.option !== null ? questions[index].options[answer.option] : '-'}</p>
+            </div>
+          );
+        })}
+      </div>
 
-          
-        );
-      })}
       <p>Você acertou {numRightAnswers} questões de {questions.length}. {numRightAnswers/questions.length > 0.5 ? 'Parabéns!' : 'Você ainda pode melhorar'}</p>
     </div>
   );
