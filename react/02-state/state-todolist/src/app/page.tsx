@@ -131,7 +131,7 @@ function Page() {
             
 
 
-            <div className='w-full'>
+            <div className='w-full max-w-3xl'>
 
                 {
                     itemsList.map((item, index) => (
