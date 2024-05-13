@@ -10,8 +10,6 @@
 /coverage
 
 # next.js
-.next
-node_modules
 /.next/
 /out/
 
